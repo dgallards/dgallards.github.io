@@ -1,1 +1,0 @@
-# dgallards.github.io
