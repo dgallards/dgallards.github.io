@@ -55,14 +55,8 @@
     //load project.html
 $(document).ready(function() {
 
-    var url_part = window.location.href.split("/");
-
-    if(url_part[url_part.length-1] == ""){
-        $("#content").load("about.html");
-    }else{
-        $("#content").load(url_part[url_part.length-1]);
-    }
-
+    
+    $("#content").load("about.html");
 
     $("#projects").on("click", function(evt) {
         $("#content").empty();
