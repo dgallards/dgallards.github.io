@@ -71,9 +71,13 @@ $(document).ready(function() {
     });
 
     $("#about").on("click", function(evt) {
-        $("#content").empty();
-        $("#content").load('about.html');
-        evt.preventDefault();
+        //fade out the current content
+        $("#content").fadeOut(500, function(evt) {
+            $("#content").empty();
+            //fade in the new content
+            $("#content").load('about.html');
+            $("#content").fadeIn(500);
+            evt.preventDefault();
     });
 
     $("#contact").on("click", function(evt) {
