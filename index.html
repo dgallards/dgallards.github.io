@@ -58,7 +58,9 @@ $(document).ready(function() {
     
     $("#content").load("about.html");
 
+
     $("#projects").on("click", function(evt) {
+        evt.preventDefault();
         $("#content").fadeOut(250, function(evt) {
             $("#content").empty();
             $("#content").load("projects.html");
@@ -67,6 +69,7 @@ $(document).ready(function() {
     });
 
     $("#about").on("click", function(evt) {
+        evt.preventDefault();
         $("#content").fadeOut(250, function(evt) {
             $("#content").empty();
             $("#content").load('about.html');
@@ -75,7 +78,7 @@ $(document).ready(function() {
     });
 
     $("#contact").on("click", function(evt) {
-        //fade out the current content
+        evt.preventDefault();
         $("#content").fadeOut(250, function(evt) {
             $("#content").empty();
             $("#content").load('contact.html');
