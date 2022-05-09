@@ -52,19 +52,19 @@ $(document).ready(function() {
     $("#content").load("about.html");
 
 
-    $("#projects").on("click", function() {
+    $("#projects").on("click", function(evt) {
         $("#content").empty();
         $("#content").load('projects.html');
         evt.preventDefault();
     });
 
-    $("#about").on("click", function() {
+    $("#about").on("click", function(evt) {
         $("#content").empty();
         $("#content").load('about.html');
         evt.preventDefault();
     });
 
-    $("#contact").on("click", function() {
+    $("#contact").on("click", function(evt) {
         $("#content").empty();
         $("#content").load('contact.html');
         evt.preventDefault();
