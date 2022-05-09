@@ -93,17 +93,17 @@
 $(document).ready(function() {
 
     $("#projects").on("click", function() {
-        $("#content").removeData();
+        $("#content").empty();
         $("#content").load('projects.html');
     });
 
     $("#about").on("click", function() {
-        $("#content").removeData();
+        $("#content").empty();
         $("#content").load('about.html');
     });
 
     $("#contact").on("click", function() {
-        $("#content").removeData();
+        $("#content").empty();
         $("#content").load('contact.html');
     });
 });
