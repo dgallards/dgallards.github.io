@@ -92,17 +92,18 @@
     //load project.html
 $(document).ready(function() {
 
-    //when the page is loaded, load about.html as default content
-
     $("#projects").on("click", function() {
+        $("#content").removeData();
         $("#content").load('projects.html');
     });
 
     $("#about").on("click", function() {
+        $("#content").removeData();
         $("#content").load('about.html');
     });
 
     $("#contact").on("click", function() {
+        $("#content").removeData();
         $("#content").load('contact.html');
     });
 });
