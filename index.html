@@ -61,24 +61,21 @@ $(document).ready(function() {
     $("#projects").on("click", function(evt) {
         $("#content").empty();
         $("#content").load('projects.html');
-        evt.preventDefault();
     });
 
     $("#about").on("click", function(evt) {
         //fade out the current content
-        $("#content").fadeOut(500, function(evt) {
+        $("#content").fadeOut(250, function(evt) {
             $("#content").empty();
             //fade in the new content
             $("#content").load('about.html');
-            $("#content").fadeIn(500);
-            evt.preventDefault();
+            $("#content").fadeIn(250);
         });
     });
 
     $("#contact").on("click", function(evt) {
         $("#content").empty();
         $("#content").load('contact.html');
-        evt.preventDefault();
     });
 });
 </script>
