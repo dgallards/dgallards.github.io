@@ -57,8 +57,11 @@ $(document).ready(function() {
 
     var url_part = window.location.href.split("/");
 
-
-    $("#content").load(url_part[url_part.length-1]);
+    if(url_part[url_part.length-1] == ""){
+        $("#content").load("about.html");
+    }else{
+        $("#content").load(url_part[url_part.length-1]);
+    }
 
 
     $("#projects").on("click", function(evt) {
