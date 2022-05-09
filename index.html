@@ -27,12 +27,12 @@
 
     <div id="menu">
         <div class="pure-menu">
-            <a class="pure-menu-heading" href="#company">Diego Gallardo</a>
+            <a class="pure-menu-heading" href="">Diego Gallardo</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="#about" id="about" class="pure-menu-link">Sobre mi</a></li>
-                <li class="pure-menu-item"><a href="#projects" id="projects" class="pure-menu-link">Mis proyectos</a></li>
-                <li class="pure-menu-item"><a href="#contact" id="contact" class="pure-menu-link">Contacta conmigo</a></li>
+                <li class="pure-menu-item"><a href="" id="about" class="pure-menu-link">Sobre mi</a></li>
+                <li class="pure-menu-item"><a href="" id="projects" class="pure-menu-link">Mis proyectos</a></li>
+                <li class="pure-menu-item"><a href="" id="contact" class="pure-menu-link">Contacta conmigo</a></li>
             </ul>
         </div>
     </div>
@@ -59,23 +59,28 @@ $(document).ready(function() {
     $("#content").load("about.html");
 
     $("#projects").on("click", function(evt) {
-        $("#content").empty();
-        $("#content").load('projects.html');
+        $("#content").fadeOut(250, function(evt) {
+            $("#content").empty();
+            $("#content").load("projects.html");
+            $("#content").fadeIn(250);
+        });
     });
 
     $("#about").on("click", function(evt) {
-        //fade out the current content
         $("#content").fadeOut(250, function(evt) {
             $("#content").empty();
-            //fade in the new content
             $("#content").load('about.html');
             $("#content").fadeIn(250);
         });
     });
 
     $("#contact").on("click", function(evt) {
-        $("#content").empty();
-        $("#content").load('contact.html');
+        //fade out the current content
+        $("#content").fadeOut(250, function(evt) {
+            $("#content").empty();
+            $("#content").load('contact.html');
+            $("#content").fadeIn(250);
+        });
     });
 });
 </script>
