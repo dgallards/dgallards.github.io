@@ -48,7 +48,10 @@
 <script>
     //load project.html
 $(document).ready(function() {
-   
+
+    //when the page is loaded, load about.html as default content
+    $("#content").load("about.html");
+
     $("#projects").on("click", function() {
         $("#content").load('projects.html');
     });
@@ -60,12 +63,10 @@ $(document).ready(function() {
     $("#contact").on("click", function() {
         $("#content").load('contact.html');
     });
-
-    //load about as default
-    $("#content").load('about.html');
-    
 });
 </script>
+
+
 
 </body>
 </html>
