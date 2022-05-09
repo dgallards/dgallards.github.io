@@ -93,18 +93,15 @@
 $(document).ready(function() {
 
     $("#projects").on("click", function() {
-        $("#content").empty();
-        $("#content").load('projects.html');
+        $("#content").replaceWith('projects.html');
     });
 
     $("#about").on("click", function() {
-        $("#content").empty();
-        $("#content").load('about.html');
+        $("#content").replaceWith('about.html');
     });
 
     $("#contact").on("click", function() {
-        $("#content").empty();
-        $("#content").load('contact.html');
+        $("#content").replaceWith('contact.html');
     });
 });
 </script>
