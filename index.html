@@ -14,7 +14,7 @@
 
 <div id="layout">
     <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
+    <a href="" id="menuLink" class="menu-link">
         <!-- Hamburger icon -->
         <!--Centered-->
         <span><svg width="15" height="20">
@@ -30,9 +30,9 @@
             <a class="pure-menu-heading" href="#company">Diego Gallardo</a>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="" id="about" class="pure-menu-link">Sobre mi</a></li>
-                <li class="pure-menu-item"><a href="" id="projects" class="pure-menu-link">Mis proyectos</a></li>
-                <li class="pure-menu-item"><a href="" id="contact" class="pure-menu-link">Contacta conmigo</a></li>
+                <li class="pure-menu-item"><a href="about" id="about" class="pure-menu-link">Sobre mi</a></li>
+                <li class="pure-menu-item"><a href="projects" id="projects" class="pure-menu-link">Mis proyectos</a></li>
+                <li class="pure-menu-item"><a href="contact" id="contact" class="pure-menu-link">Contacta conmigo</a></li>
             </ul>
         </div>
     </div>
@@ -55,7 +55,10 @@
     //load project.html
 $(document).ready(function() {
 
-    $("#content").load("about.html");
+    var url_part = window.location.href.split("/");
+
+
+    $("#content").load(url_part[url_part.length-1]);
 
 
     $("#projects").on("click", function(evt) {
