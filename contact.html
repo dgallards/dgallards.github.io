@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <title>div 2</title>
 </head>
 
@@ -16,19 +18,19 @@
     </p>
 
     <div class="pure-g">
-        <form class="pure-form pure-form-stacked">
+        <form class="pure-form pure-form-stacked" action="https://formspree.io/f/xjvljlwb" method="POST">
             <div class="pure-u-1-4">
-                </div>
-                    <label for="stacked-name">Nombre:</label>
-                    <input type="text" id="stacked-name" placeholder="Nombre" />
-                    <label for="stacked-email">Email</label>
-                    <input type="email" id="stacked-email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-                    <button type="submit" class="pure-button pure-button-primary" onclick="send()" >Enviar</button>
+                <label for="stacked-name">Nombre:</label>
+                <input type="text" id="stacked-name" placeholder="Nombre" />
+                <label for="stacked-email">Email</label>
+                <input type="email" id="stacked-email" placeholder="Email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+                <button class="pure-button pure-button-primary">Enviar</button>
             </div>
             <div class="pure-u-3-4">
                 <div>
-                    <textarea class="pure-input-3-4" placeholder="Textareas work too"></textarea>
                     <label for="message" class="form-label">Your Message</label>
+                    <textarea class="pure-input-3-4" placeholder="Textareas work too"></textarea>
                 </div>
             </div>
 
@@ -41,25 +43,3 @@
 </body>
 
 </html>
-
-<script src="https://smtpjs.com/v3/smtp.js">
-</script>
-<script>
-function send(){
-    var nombre = document.getElementById("stacked-name").value;
-    var emailCli = document.getElementById("stacked-email").value;
-    var mensaje = document.getElementById("message").value;
-    Email.send({
-        Host: "smtp.mailtrap.io",
-        Username: "f9da3dad025c97",
-        Password: "981a9e5906f54a",
-        To: "diegogallardozancada@gmail.com",
-        From: emailCli,
-        Subject: "Mensaje de " + nombre,
-        Body: mensaje
-
-    }).then(
-    message => alert("Email enviado") 
-    );
-}
-</script>
