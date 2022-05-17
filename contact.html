@@ -16,23 +16,33 @@
     <p>
         Puedes contactar conmigo en mi <a href="">LinkedIn</a> <a href="">Infojobs</a> , o en mi <a href="">GitHub</a>.
     </p>
+    <p>
+        También puedes contactar usando el formulario de abajo.
+    </p>
 
     <div class="pure-g">
-        <form class="pure-form pure-form-stacked" action="https://formspree.io/f/xjvljlwb" method="POST">
-            <div class="pure-u-1-4">
-                <label for="stacked-name">Nombre:</label>
-                <input type="text" id="stacked-name" placeholder="Nombre" />
-                <label for="stacked-email">Email</label>
-                <input type="email" id="stacked-email" placeholder="Email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
-                <button class="pure-button pure-button-primary">Enviar</button>
-            </div>
-            <div class="pure-u-3-4">
-                <div>
-                    <label for="message" class="form-label">Your Message</label>
-                    <textarea class="pure-input-3-4" placeholder="Textareas work too"></textarea>
+        <form class="pure-form pure-form-stacked" action="https://formspree.io/f/xjvljlwb" method="POST"
+            accept-charset="utf-8">
+            <fieldset id="fs-frm-inputs">
+                <div class="pure-u-1-4">
+                    <label for="stacked-name">Nombre:</label>
+                    <input type="text" id="full-name" placeholder="Nombre" required="" />
+
+                    <label for="stacked-email">Email</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="Email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="" />
+
+                    <button class="pure-button pure-button-primary">Enviar</button>
                 </div>
-            </div>
+                <div class="pure-u-3-4">
+                    <div>
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" name="message" class="pure-input-3-4"
+                            placeholder="Escribe tu mensaje aquí"></textarea>
+                        <input type="hidden" name="_subject" id="email-subject" value="formulario de contacto web">
+                    </div>
+                </div>
+            </fieldset>
 
         </form>
 
