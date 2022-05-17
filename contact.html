@@ -16,22 +16,18 @@
     </p>
 
     <div class="pure-g">
-        <form>
+        <form class="pure-form pure-form-stacked">
             <div class="pure-u-1-4">
-                <div class="form-group">
-                    <input type="text" id="full-name" class="form-field" placeholder="Your Name" required>
-                    <label for="full-name" class="form-label">Your Name</label>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <input type="email" id="email" class="form-field" placeholder="Your Email"
-                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                <label for="email" class="form-label">Your Email</label>
+                    <label for="stacked-name">Nombre:</label>
+                    <input type="text" id="stacked-name" placeholder="Nombre" />
+                    <label for="stacked-email">Email</label>
+                    <input type="email" id="stacked-email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+                    <button type="submit" class="pure-button pure-button-primary" onclick="send()" >Enviar</button>
             </div>
             <div class="pure-u-3-4">
-                <div class="form-group">
-                    <textarea id="message" class="form-field" placeholder="Your Message" rows="6" required></textarea>
+                <div>
+                    <textarea class="pure-input-3-4" placeholder="Textareas work too"></textarea>
                     <label for="message" class="form-label">Your Message</label>
                 </div>
             </div>
@@ -45,3 +41,25 @@
 </body>
 
 </html>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script>
+function send(){
+    var nombre = document.getElementById("stacked-name").value;
+    var emailCli = document.getElementById("stacked-email").value;
+    var mensaje = document.getElementById("message").value;
+    Email.send({
+        Host: "smtp.mailtrap.io",
+        Username: "f9da3dad025c97",
+        Password: "981a9e5906f54a",
+        To: "diegogallardozancada@gmail.com",
+        From: emailCli,
+        Subject: "Mensaje de " + nombre,
+        Body: mensaje
+
+    }).then(
+    message => alert("Email enviado") 
+    );
+}
+</script>
