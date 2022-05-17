@@ -401,7 +401,7 @@ code {
     }
     #menu .pure-menu-heading:hover,
     #menu .pure-menu-heading:focus {
-        color: #999;
+        color: #fff;
     }
 
     #menu .pure-menu-item .active {
